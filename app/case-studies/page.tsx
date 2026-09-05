@@ -51,3 +51,8 @@ export default function CaseStudies() {
               </ul>
             </Card>
           ))}
+        </div>
+      </Section>
+    </div>
+  );
+}
