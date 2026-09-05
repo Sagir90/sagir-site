@@ -1,6 +1,6 @@
-import Card from "../../components/Card";
-import Section from "../../components/Section";
-import IconTitle from "../../components/IconTitle";
+import Card from "../components/Card";
+import Section from "../components/Section";
+import IconTitle from "../components/IconTitle";
 import { User, Network, Sparkles } from "lucide-react";
 
 export default function Team() {

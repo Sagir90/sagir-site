@@ -1,6 +1,6 @@
-import Card from "../../components/Card";
-import Section from "../../components/Section";
-import CTAButton from "../../components/CTAButton";
+import Card from "../components/Card";
+import Section from "../components/Section";
+import CTAButton from "../components/CTAButton";
 import { Phone, Mail, Building, ArrowRight } from "lucide-react";
 
 export default function Contact() {

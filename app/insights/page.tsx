@@ -1,8 +1,8 @@
-import Card from "../../components/Card";
-import Section from "../../components/Section";
-import Hero from "../../components/Hero";
-import Grid from "../../components/Grid";
-import IconTitle from "../../components/IconTitle";
+import Card from "../components/Card";
+import Section from "../components/Section";
+import Hero from "../components/Hero";
+import Grid from "../components/Grid";
+import IconTitle from "../components/IconTitle";
 import { Lightbulb, BookOpen, Cpu } from "lucide-react";
 
 export default function Insights() {

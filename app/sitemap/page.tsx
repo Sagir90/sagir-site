@@ -1,5 +1,5 @@
-import Card from "../../components/Card";
-import Section from "../../components/Section";
+import Card from "../components/Card";
+import Section from "../components/Section";
 import { Link as LinkIcon } from "lucide-react";
 
 export default function Sitemap() {
