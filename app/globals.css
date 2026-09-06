@@ -1,43 +1,95 @@
-@import "tailwindcss";
+/* SAGIR — design tokens live in the Brand Toolkit.
+   Structure is drawn with 1px rules; no radii, no shadows. */
 
 :root {
-  --bg-dark: #0A0F0F;
-  --fg-light: #E6F7F7;
-  --teal: #00B3B3;
-  --green: #7DFF7A;
-  --card: #111818;
+  --ivory:        #F6F4EF;
+  --white:        #FFFFFF;
+  --ink:          #0A0F0F;
+  --ink-text:     #0C1211;
+  --slate:        #4A5654;
+  --muted:        #59645F;
+  --teal:         #00706E;
+  --signal:       #7DFF7A;
+  --mist:         #E6F7F7;
+  --rule:         #E2DED4;
+  --field:        #C9C3B4;
+  --hover-fill:   #F1EEE6;
+  --container:    1240px;
+  --gutter:       32px;
+  --header-h:     72px;
+  --ease:         cubic-bezier(.2,.7,.2,1);
 }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--bg-dark);
-  color: var(--fg-light);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--ivory);
+  color: var(--ink-text);
+  font-family: var(--font-geist), Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Gradient border */
-.gradient-border {
-  border: 1px solid transparent;
-  background: linear-gradient(var(--card), var(--card)) padding-box,
-              linear-gradient(135deg, var(--teal), var(--green)) border-box;
+a { color: var(--teal); text-decoration: none; }
+a:hover { color: var(--ink-text); }
+::selection { background: var(--signal); color: var(--ink-text); }
+
+button, input, select, textarea { font: inherit; border-radius: 0; }
+img, video { display: block; max-width: 100%; }
+
+/* ---- keyframes ---- */
+@keyframes sg-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes sg-drift {
+  0%   { transform: translate3d(0,0,0) scale(1); }
+  50%  { transform: translate3d(-3%,2%,0) scale(1.08); }
+  100% { transform: translate3d(0,0,0) scale(1); }
 }
 
-/* Hover effect */
-.card-hover {
-  transition: transform 200ms ease, box-shadow 200ms ease;
-}
-.card-hover:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 18px 40px rgba(0, 179, 179, 0.25);
+/* ---- scroll reveal (opt-in via data-reveal) ---- */
+[data-reveal] { opacity: 0; transform: translateY(22px); }
+[data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+  transition: opacity 780ms var(--ease), transform 780ms var(--ease);
 }
 
-/* Animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ---- header ---- */
+.hv-nav:hover { color: var(--ink-text) !important; }
+.hv-cta:hover { background: var(--teal) !important; }
+
+/* ---- hover states lifted from the design (style-hover) ---- */
+.hv1:hover{background:#FFFFFF !important}
+.hv2:hover{border-color:#7DFF7A;color:#7DFF7A !important}
+.hv3:hover{background:#F1EEE6 !important}
+.hv4:hover{background:#F1EEE6 !important}
+.hv5:hover{background:#F1EEE6 !important}
+.hv6:hover{background:#F1EEE6 !important}
+.hv7:hover{background:#F6F4EF !important}
+.hv8:hover{background:#F6F4EF !important}
+.hv9:hover{background:#F6F4EF !important}
+.hv10:hover{border-color:#00706E !important}
+.hv11:hover{background:#F1EEE6 !important}
+.hv12:hover{background:#F1EEE6 !important}
+.hv13:hover{background:#F1EEE6 !important}
+.hv14:hover{background:#F1EEE6 !important}
+.hv15:hover{background:#F1EEE6 !important}
+.hv16:hover{background:#00706E !important}
+.hv17:hover{background:#0C1211 !important}
+.hv18:hover{background:#E6F7F7 !important}
+.hv19:hover{border-color:#7DFF7A;color:#7DFF7A !important}
+.hv20:hover{background:#E6F7F7 !important}
+.hv21:hover{border-color:#7DFF7A;color:#7DFF7A !important}
+.hv22:hover{color:#7DFF7A !important}
+.hv23:hover{color:#7DFF7A !important}
+.hv24:hover{color:#7DFF7A !important}
+.hv25:hover{color:#7DFF7A !important}
+.hv26:hover{color:#7DFF7A !important}
+.hv27:hover{color:#7DFF7A !important}
+.hv28:hover{color:#7DFF7A !important}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  [data-reveal] { opacity: 1; transform: none; }
 }
