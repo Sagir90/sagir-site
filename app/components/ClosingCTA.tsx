@@ -2,7 +2,6 @@ import Link from "next/link";
 
 export default function ClosingCTA() {
   return (
-    {/* ============ CTA + FOOTER ============ */}
       <section style={{ background: "#0A0F0F", color: "#E6F7F7", borderTop: "1px solid rgba(230,247,247,0.1)" }}>
         <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "88px 32px", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "48px", alignItems: "center" }}>
           <div>
