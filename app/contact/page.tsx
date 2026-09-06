@@ -49,7 +49,7 @@ export default function ContactPage() {
               </div>
               <label style={{ display: "grid", gap: "8px" }}>
                 <span style={{ fontFamily: "var(--font-geist-mono), monospace", fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#59645F" }}>What are you trying to achieve?</span>
-                <textarea rows="6" placeholder="The outcome you need, the constraint you're working against, and any date that matters." style={{ border: "1px solid #C9C3B4", background: "#F6F4EF", padding: "13px 14px", fontFamily: "var(--font-geist), sans-serif", fontSize: "15px", lineHeight: "1.6", color: "#0C1211", resize: "vertical" }}></textarea>
+                <textarea rows={6} placeholder="The outcome you need, the constraint you're working against, and any date that matters." style={{ border: "1px solid #C9C3B4", background: "#F6F4EF", padding: "13px 14px", fontFamily: "var(--font-geist), sans-serif", fontSize: "15px", lineHeight: "1.6", color: "#0C1211", resize: "vertical" }}></textarea>
               </label>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "20px", flexWrap: "wrap" }}>
                 <p style={{ fontFamily: "var(--font-geist-mono), monospace", fontSize: "11px", color: "#59645F", margin: "0" }}>RESPONSE WITHIN 1&ndash;2 BUSINESS DAYS</p>
